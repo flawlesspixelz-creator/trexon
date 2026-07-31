@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/responsive.css">
 <script defer src="assets/mobile-nav.js"></script>
+<script defer src="assets/contact-form.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -90,7 +91,7 @@ input,textarea{font-family:'Manrope',system-ui,sans-serif}
       <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#5A6472">location map — Dammam, Eastern Province</span>
     </div>
   </div>
-  <div style="background:#ffffff;border-radius:16px;padding:clamp(22px,3.5vw,44px);display:flex;flex-direction:column;gap:22px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
+  <form action="https://formspree.io/f/mlgqkory" method="POST" data-formspree style="background:#ffffff;border-radius:16px;padding:clamp(22px,3.5vw,44px);display:flex;flex-direction:column;gap:22px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)">
     <div style="display:flex;flex-direction:column;gap:8px">
       <h2 class="tx-fs-26" style="margin:0;font-size:26px;font-weight:800">Send Us a Message</h2>
       <p style="margin:0;font-size:14px;color:#5A6472">Fill in the form and our team will get back to you within one business day.</p>
@@ -98,34 +99,34 @@ input,textarea{font-family:'Manrope',system-ui,sans-serif}
     <div class="tx-grid-2-tight" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="c-name" style="font-size:13px;font-weight:700">Full Name</label>
-        <input id="c-name" type="text" placeholder="Your name" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
+        <input id="c-name" name="name" type="text" placeholder="Your name" required style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
       </div>
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="c-company" style="font-size:13px;font-weight:700">Company</label>
-        <input id="c-company" type="text" placeholder="Company name" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
+        <input id="c-company" name="company" type="text" placeholder="Company name" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
       </div>
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="c-email" style="font-size:13px;font-weight:700">Email</label>
-        <input id="c-email" type="email" placeholder="you@company.com" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
+        <input id="c-email" name="email" type="email" placeholder="you@company.com" required style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
       </div>
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="c-phone" style="font-size:13px;font-weight:700">Phone</label>
-        <input id="c-phone" type="tel" placeholder="+966 …" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
+        <input id="c-phone" name="phone" type="tel" placeholder="+966 …" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:8px">
       <label for="c-subject" style="font-size:13px;font-weight:700">Subject</label>
-      <input id="c-subject" type="text" placeholder="e.g. Manpower supply for Q4 project" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
+      <input id="c-subject" name="_subject" type="text" placeholder="e.g. Manpower supply for Q4 project" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A" style-focus="border-color:#F26A21">
     </div>
     <div style="display:flex;flex-direction:column;gap:8px">
       <label for="c-message" style="font-size:13px;font-weight:700">Message</label>
-      <textarea id="c-message" rows="5" placeholder="Tell us about your requirements…" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A;resize:vertical" style-focus="border-color:#F26A21"></textarea>
+      <textarea id="c-message" name="message" rows="5" placeholder="Tell us about your requirements…" required style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A;resize:vertical" style-focus="border-color:#F26A21"></textarea>
     </div>
-    <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-      <div style="background:rgba(242,106,33,0.1);border:1.5px solid #F26A21;border-radius:8px;padding:14px 18px;font-size:14px;font-weight:700;color:#0B1F3A">Thank you — your message has been noted. Our team will reach out shortly.</div>
-    </sc-if>
-    <button onClick="{{ send }}" style="border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;background:#F26A21;color:#0B1F3A;font-size:15px;font-weight:700;padding:16px 30px;border-radius:10px;box-shadow:0 10px 24px rgba(242,106,33,0.3);align-self:flex-start" style-hover="background:#F26A21;transform:translateY(-2px);box-shadow:0 14px 30px rgba(242,106,33,0.4)">Send Message <span>→</span></button>
-  </div>
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden">
+    <div data-form-success role="status" aria-live="polite" style="background:rgba(242,106,33,0.1);border:1.5px solid #F26A21;border-radius:8px;padding:14px 18px;font-size:14px;font-weight:700;color:#0B1F3A">Thank you — your message has been sent. Our team will reach out shortly.</div>
+    <div data-form-error role="alert" aria-live="assertive" style="background:rgba(11,31,58,0.06);border:1.5px solid #0B1F3A;border-radius:8px;padding:14px 18px;font-size:14px;font-weight:700;color:#0B1F3A"></div>
+    <button type="submit" style="border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;background:#F26A21;color:#0B1F3A;font-size:15px;font-weight:700;padding:16px 30px;border-radius:10px;box-shadow:0 10px 24px rgba(242,106,33,0.3);align-self:flex-start" style-hover="background:#F26A21;transform:translateY(-2px);box-shadow:0 14px 30px rgba(242,106,33,0.4)">Send Message <span>→</span></button>
+  </form>
 </section>
 
 </main>

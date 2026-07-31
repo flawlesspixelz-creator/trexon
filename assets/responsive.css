@@ -56,6 +56,14 @@ footer :focus-visible,
 /* --------------------------------------------------------------------------
    Form controls
    -------------------------------------------------------------------------- */
+[hidden] { display: none !important; }
+
+/* The <x-dc> runtime strips the bare `hidden` attribute when it compiles the
+   markup, so the contact form's status panels are hidden in CSS instead and
+   revealed by a data-show attribute that assets/contact-form.js toggles. */
+[data-form-success], [data-form-error] { display: none; }
+[data-form-success][data-show], [data-form-error][data-show] { display: block; }
+
 input, textarea, select, button { font-family: inherit; max-width: 100%; }
 input, textarea, select { width: 100%; }
 
