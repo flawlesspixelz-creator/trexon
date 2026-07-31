@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/responsive.css">
+<script defer src="assets/mobile-nav.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -26,33 +28,33 @@ input,textarea{font-family:'Manrope',system-ui,sans-serif}
 </helmet>
 
 <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(11,31,58,0.06)">
-  <div style="max-width:1240px;margin:0 auto;padding:0 32px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4.5vw,32px);height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px">
     <a href="index.html" style="display:block"><img src="assets/logo-transparent.png" alt="Trexon" style="height:36px;display:block"></a>
-    <nav style="display:flex;align-items:center;gap:28px">
+    <nav class="tx-nav" style="display:flex;align-items:center;gap:28px">
       <a href="index.html" style="font-size:14px;font-weight:600;color:#0B1F3A" style-hover="color:#F26A21">Home</a>
       <a href="about.html" style="font-size:14px;font-weight:600;color:#0B1F3A" style-hover="color:#F26A21">About Us</a>
       <a href="services.html" style="font-size:14px;font-weight:600;color:#0B1F3A" style-hover="color:#F26A21">Our Services <span style="font-size:10px">▾</span></a>
       <a href="#top" style="font-size:14px;font-weight:700;color:#F26A21;border-bottom:2px solid #F26A21;padding-bottom:4px">Contact Us</a>
     </nav>
-    <a href="#form" style="display:inline-flex;align-items:center;gap:8px;background:#F26A21;color:#ffffff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:10px;box-shadow:0 8px 20px rgba(242,106,33,0.28)" style-hover="background:#d5570f;color:#ffffff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(242,106,33,0.4)">Get a Quote <span style="font-size:15px">→</span></a>
+    <a class="tx-header-cta" href="#form" style="display:inline-flex;align-items:center;gap:8px;background:#F26A21;color:#ffffff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:10px;box-shadow:0 8px 20px rgba(242,106,33,0.28)" style-hover="background:#d5570f;color:#ffffff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(242,106,33,0.4)">Get a Quote <span style="font-size:15px">→</span></a>
   </div>
 </header>
 
-<a href="https://wa.me/966138123456?text=Hi%20Trexon%2C%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed;bottom:28px;right:28px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#ffffff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,0.4)" style-hover="transform:translateY(-3px);box-shadow:0 16px 34px rgba(37,211,102,0.5);color:#ffffff"><iconify-icon icon="mdi:whatsapp" width="30"></iconify-icon></a>
+<a class="tx-fab" href="https://wa.me/966138123456?text=Hi%20Trexon%2C%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed;bottom:28px;right:28px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#ffffff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,0.4)" style-hover="transform:translateY(-3px);box-shadow:0 16px 34px rgba(37,211,102,0.5);color:#ffffff"><iconify-icon icon="mdi:whatsapp" width="30"></iconify-icon></a>
 
 <section id="top" data-screen-label="Contact Hero" style="background:radial-gradient(1000px 520px at 88% 0%, rgba(242,106,33,0.16), transparent 62%), #0B1F3A">
-  <div style="max-width:1240px;margin:0 auto;padding:70px 32px 80px;display:flex;flex-direction:column;gap:20px">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(29px,4.86vw,70px) clamp(18px,4.5vw,32px) clamp(34px,5.56vw,80px);display:flex;flex-direction:column;gap:20px">
     <span style="font-size:12px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.55)"><a href="index.html" style="color:rgba(255,255,255,0.55)" style-hover="color:#F26A21">HOME</a> / <span style="color:#F26A21">CONTACT US</span></span>
-    <h1 style="margin:0;font-size:48px;line-height:1.12;font-weight:800;letter-spacing:-1px;color:#ffffff">Let's Talk About <span style="color:#F26A21">Your Project</span></h1>
+    <h1 class="tx-fs-48" style="margin:0;font-size:48px;line-height:1.12;font-weight:800;letter-spacing:-1px;color:#ffffff">Let's Talk About <span style="color:#F26A21">Your Project</span></h1>
     <div style="width:56px;height:4px;background:#F26A21;border-radius:2px"></div>
     <p style="margin:0;font-size:16px;line-height:1.75;color:rgba(255,255,255,0.82);max-width:620px">Get in touch with us today for reliable solutions tailored to your needs — manpower, equipment, construction, trading, and more.</p>
   </div>
 </section>
 
-<section id="form" data-screen-label="Contact Form" style="max-width:1240px;margin:0 auto;padding:90px 32px 100px;display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start">
+<section class="tx-grid-2" id="form" data-screen-label="Contact Form" style="max-width:1240px;margin:0 auto;padding:clamp(38px,6.25vw,90px) clamp(18px,4.5vw,32px) clamp(42px,6.94vw,100px);display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start">
   <div style="display:flex;flex-direction:column;gap:24px">
     <span style="font-size:12px;font-weight:800;letter-spacing:2px;color:#F26A21">CONTACT INFORMATION</span>
-    <h2 style="margin:0;font-size:32px;font-weight:800;letter-spacing:-0.5px">Reach Us Directly</h2>
+    <h2 class="tx-fs-32" style="margin:0;font-size:32px;font-weight:800;letter-spacing:-0.5px">Reach Us Directly</h2>
     <div style="background:#ffffff;border-radius:14px;padding:28px 30px;display:flex;gap:20px;align-items:flex-start;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
       <div style="flex:none;width:52px;height:52px;border-radius:50%;background:#0B1F3A;display:flex;align-items:center;justify-content:center;font-size:20px;color:#F26A21"><iconify-icon icon="lucide:map-pin" width="22"></iconify-icon></div>
       <div style="display:flex;flex-direction:column;gap:6px">
@@ -85,12 +87,12 @@ input,textarea{font-family:'Manrope',system-ui,sans-serif}
       <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#8A8378">location map — Dammam, Eastern Province</span>
     </div>
   </div>
-  <div style="background:#ffffff;border-radius:16px;padding:44px;display:flex;flex-direction:column;gap:22px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
+  <div style="background:#ffffff;border-radius:16px;padding:clamp(22px,3.5vw,44px);display:flex;flex-direction:column;gap:22px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
     <div style="display:flex;flex-direction:column;gap:8px">
-      <h2 style="margin:0;font-size:26px;font-weight:800">Send Us a Message</h2>
+      <h2 class="tx-fs-26" style="margin:0;font-size:26px;font-weight:800">Send Us a Message</h2>
       <p style="margin:0;font-size:14px;color:#5A6472">Fill in the form and our team will get back to you within one business day.</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+    <div class="tx-grid-2-tight" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
       <div style="display:flex;flex-direction:column;gap:8px">
         <label for="c-name" style="font-size:13px;font-weight:700">Full Name</label>
         <input id="c-name" type="text" placeholder="Your name" style="border:1.5px solid rgba(11,31,58,0.15);border-radius:8px;padding:13px 16px;font-size:14px;color:#0B1F3A;outline:none" style-focus="border-color:#F26A21">
@@ -124,7 +126,7 @@ input,textarea{font-family:'Manrope',system-ui,sans-serif}
 </section>
 
 <footer id="footer" data-screen-label="Footer" style="background:#0B1F3A;color:#ffffff">
-  <div style="max-width:1240px;margin:0 auto;padding:80px 32px 56px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:48px">
+  <div class="tx-footer-grid" style="max-width:1240px;margin:0 auto;padding:clamp(34px,5.56vw,80px) clamp(18px,4.5vw,32px) clamp(24px,3.89vw,56px);display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:48px">
     <div style="display:flex;flex-direction:column;gap:18px">
       <img src="assets/logo-white.png" alt="Trexon" style="height:34px;width:auto;align-self:flex-start">
       <p style="margin:0;font-size:13.5px;line-height:1.7;color:rgba(255,255,255,0.7);max-width:260px">Trexon General Contracting Establishment is a Dammam-based company delivering reliable industrial solutions across Saudi Arabia.</p>
@@ -157,7 +159,7 @@ input,textarea{font-family:'Manrope',system-ui,sans-serif}
     </div>
   </div>
   <div style="border-top:1px solid rgba(255,255,255,0.12)">
-    <div style="max-width:1240px;margin:0 auto;padding:22px 32px;display:flex;justify-content:space-between;align-items:center;gap:24px">
+    <div class="tx-footer-bottom" style="max-width:1240px;margin:0 auto;padding:clamp(16px,1.53vw,22px) clamp(18px,4.5vw,32px);display:flex;justify-content:space-between;align-items:center;gap:24px">
       <span style="font-size:12.5px;color:rgba(255,255,255,0.6)">© 2025 Trexon General Contracting Establishment. All Rights Reserved.</span>
       <div style="display:flex;gap:28px">
         <a href="#footer" style="font-size:12.5px;color:rgba(255,255,255,0.6)" style-hover="color:#F26A21">Privacy Policy</a>

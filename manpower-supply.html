@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/responsive.css">
+<script defer src="assets/mobile-nav.js"></script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -25,25 +27,25 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
 </helmet>
 
 <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(11,31,58,0.06)">
-  <div style="max-width:1240px;margin:0 auto;padding:0 32px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4.5vw,32px);height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px">
     <a href="index.html" style="display:block"><img src="assets/logo-transparent.png" alt="Trexon" style="height:36px;display:block"></a>
-    <nav style="display:flex;align-items:center;gap:28px">
+    <nav class="tx-nav" style="display:flex;align-items:center;gap:28px">
       <a href="index.html" style="font-size:14px;font-weight:600;color:#0B1F3A" style-hover="color:#F26A21">Home</a>
       <a href="about.html" style="font-size:14px;font-weight:600;color:#0B1F3A" style-hover="color:#F26A21">About Us</a>
       <a href="services.html" style="font-size:14px;font-weight:700;color:#F26A21;border-bottom:2px solid #F26A21;padding-bottom:4px">Our Services <span style="font-size:10px">▾</span></a>
       <a href="contact.html" style="font-size:14px;font-weight:600;color:#0B1F3A" style-hover="color:#F26A21">Contact Us</a>
     </nav>
-    <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:#F26A21;color:#ffffff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:10px;box-shadow:0 8px 20px rgba(242,106,33,0.28)" style-hover="background:#d5570f;color:#ffffff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(242,106,33,0.4)">Get a Quote <span style="font-size:15px">→</span></a>
+    <a class="tx-header-cta" href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:#F26A21;color:#ffffff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:10px;box-shadow:0 8px 20px rgba(242,106,33,0.28)" style-hover="background:#d5570f;color:#ffffff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(242,106,33,0.4)">Get a Quote <span style="font-size:15px">→</span></a>
   </div>
 </header>
 
-<a href="https://wa.me/966138123456?text=Hi%20Trexon%2C%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed;bottom:28px;right:28px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#ffffff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,0.4)" style-hover="transform:translateY(-3px);box-shadow:0 16px 34px rgba(37,211,102,0.5);color:#ffffff"><iconify-icon icon="mdi:whatsapp" width="30"></iconify-icon></a>
+<a class="tx-fab" href="https://wa.me/966138123456?text=Hi%20Trexon%2C%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed;bottom:28px;right:28px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#ffffff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,0.4)" style-hover="transform:translateY(-3px);box-shadow:0 16px 34px rgba(37,211,102,0.5);color:#ffffff"><iconify-icon icon="mdi:whatsapp" width="30"></iconify-icon></a>
 
 <section id="top" data-screen-label="Service Hero" style="background:radial-gradient(1000px 520px at 88% 0%, rgba(242,106,33,0.16), transparent 62%), #0B1F3A">
-  <div style="max-width:1240px;margin:0 auto;padding:80px 32px 90px;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center">
+  <div class="tx-grid-2" style="max-width:1240px;margin:0 auto;padding:clamp(34px,5.56vw,80px) clamp(18px,4.5vw,32px) clamp(38px,6.25vw,90px);display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center">
     <div style="display:flex;flex-direction:column;gap:20px">
       <span style="font-size:12px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.55)"><a href="index.html" style="color:rgba(255,255,255,0.55)" style-hover="color:#F26A21">HOME</a> / OUR SERVICES / <span style="color:#F26A21">MANPOWER SUPPLY</span></span>
-      <h1 style="margin:0;font-size:48px;line-height:1.12;font-weight:800;letter-spacing:-1px;color:#ffffff">Manpower Supply <span style="color:#F26A21">Services</span></h1>
+      <h1 class="tx-fs-48" style="margin:0;font-size:48px;line-height:1.12;font-weight:800;letter-spacing:-1px;color:#ffffff">Manpower Supply <span style="color:#F26A21">Services</span></h1>
       <div style="width:56px;height:4px;background:#F26A21;border-radius:2px"></div>
       <p style="margin:0;font-size:16px;line-height:1.75;color:rgba(255,255,255,0.82)">Trexon General Contracting Establishment is one of the finest industrial service and supply companies in the Eastern Province, setting the performance standard for complete industrial workforce solutions. Across an extensive range of industries, we supply certified rental manpower for every stage of your project.</p>
     </div>
@@ -51,13 +53,13 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
   </div>
 </section>
 
-<section data-screen-label="Workforce Categories" style="max-width:1240px;margin:0 auto;padding:90px 32px 100px;display:flex;flex-direction:column;gap:44px">
+<section data-screen-label="Workforce Categories" style="max-width:1240px;margin:0 auto;padding:clamp(38px,6.25vw,90px) clamp(18px,4.5vw,32px) clamp(42px,6.94vw,100px);display:flex;flex-direction:column;gap:44px">
   <div style="display:flex;flex-direction:column;gap:14px">
     <span style="font-size:12px;font-weight:800;letter-spacing:2px;color:#F26A21">WORKFORCE CATEGORIES</span>
-    <h2 style="margin:0;font-size:36px;font-weight:800;letter-spacing:-0.5px">Skilled Manpower for Every Discipline</h2>
+    <h2 class="tx-fs-36" style="margin:0;font-size:36px;font-weight:800;letter-spacing:-0.5px">Skilled Manpower for Every Discipline</h2>
   </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start">
-    <div style="background:#ffffff;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:18px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
+  <div class="tx-grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start">
+    <div style="background:#ffffff;border-radius:14px;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:18px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h3 style="margin:0;font-size:20px;font-weight:800">Engineers &amp; QA/QC / Technical Workforce</h3>
       <div style="display:flex;flex-direction:column;gap:11px">
@@ -65,7 +67,7 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
         <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;margin-top:2px;width:20px;height:20px;border-radius:50%;border:1.5px solid #F26A21;color:#F26A21;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800"><iconify-icon icon="lucide:check" width="12"></iconify-icon></span><span style="font-size:14.5px;line-height:1.55;color:#33415C">Civil Manager, Planning, Scheduling, Piping, Estimation, Structural</span></div>
       </div>
     </div>
-    <div style="background:#ffffff;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:18px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
+    <div style="background:#ffffff;border-radius:14px;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:18px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h3 style="margin:0;font-size:20px;font-weight:800">Quality Control &amp; Electro-Mechanical Workforce</h3>
       <div style="display:flex;flex-direction:column;gap:11px">
@@ -76,7 +78,7 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
         <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;margin-top:2px;width:20px;height:20px;border-radius:50%;border:1.5px solid #F26A21;color:#F26A21;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800"><iconify-icon icon="lucide:check" width="12"></iconify-icon></span><span style="font-size:14.5px;line-height:1.55;color:#33415C">Scaffolder I (TUV Certified), Industrial Technician</span></div>
       </div>
     </div>
-    <div style="background:#ffffff;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:18px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
+    <div style="background:#ffffff;border-radius:14px;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:18px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h3 style="margin:0;font-size:20px;font-weight:800">Administrative &amp; Office Personnel</h3>
       <div style="display:flex;flex-direction:column;gap:11px">
@@ -88,7 +90,7 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
         <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;margin-top:2px;width:20px;height:20px;border-radius:50%;border:1.5px solid #F26A21;color:#F26A21;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800"><iconify-icon icon="lucide:check" width="12"></iconify-icon></span><span style="font-size:14.5px;line-height:1.55;color:#33415C">Material Controller &amp; Warehouse Coordinator</span></div>
       </div>
     </div>
-    <div style="background:#ffffff;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:18px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
+    <div style="background:#ffffff;border-radius:14px;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:18px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 14px 34px rgba(11,31,58,0.08)" style-hover="transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 24px 48px rgba(11,31,58,0.12)">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h3 style="margin:0;font-size:20px;font-weight:800">General &amp; Civil Workforce</h3>
       <div style="display:flex;flex-direction:column;gap:11px">
@@ -99,10 +101,10 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
         <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;margin-top:2px;width:20px;height:20px;border-radius:50%;border:1.5px solid #F26A21;color:#F26A21;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800"><iconify-icon icon="lucide:check" width="12"></iconify-icon></span><span style="font-size:14.5px;line-height:1.55;color:#33415C">Helper / Labour</span></div>
       </div>
     </div>
-    <div style="grid-column:1 / -1;background:#0B1F3A;border-radius:14px;padding:36px;display:flex;flex-direction:column;gap:18px">
+    <div style="grid-column:1 / -1;background:#0B1F3A;border-radius:14px;padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:18px">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h3 style="margin:0;font-size:20px;font-weight:800;color:#ffffff">Supervisors &amp; Inspectors</h3>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px 40px">
+      <div class="tx-grid-2-tight" style="display:grid;grid-template-columns:1fr 1fr;gap:11px 40px">
         <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;margin-top:2px;width:20px;height:20px;border-radius:50%;border:1.5px solid #F26A21;color:#F26A21;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800"><iconify-icon icon="lucide:check" width="12"></iconify-icon></span><span style="font-size:14.5px;line-height:1.55;color:rgba(255,255,255,0.85)">Civil Surveyor &amp; AutoCAD Operator</span></div>
         <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;margin-top:2px;width:20px;height:20px;border-radius:50%;border:1.5px solid #F26A21;color:#F26A21;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800"><iconify-icon icon="lucide:check" width="12"></iconify-icon></span><span style="font-size:14.5px;line-height:1.55;color:rgba(255,255,255,0.85)">Structural Supervisors / Foreman</span></div>
         <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;margin-top:2px;width:20px;height:20px;border-radius:50%;border:1.5px solid #F26A21;color:#F26A21;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800"><iconify-icon icon="lucide:check" width="12"></iconify-icon></span><span style="font-size:14.5px;line-height:1.55;color:rgba(255,255,255,0.85)">Safety Inspectors &amp; Rigging Supervisors</span></div>
@@ -115,22 +117,22 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
 </section>
 
 <section data-screen-label="Other Services" style="background:#EFEBE5">
-  <div style="max-width:1240px;margin:0 auto;padding:56px 32px;display:flex;flex-direction:column;gap:24px">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(24px,3.89vw,56px) clamp(18px,4.5vw,32px);display:flex;flex-direction:column;gap:24px">
     <span style="font-size:12px;font-weight:800;letter-spacing:2px;color:#F26A21">EXPLORE OTHER SERVICES</span>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
-      <a href="equipment-rental.html" style="background:#ffffff;border-radius:12px;padding:22px 24px;font-size:15px;font-weight:800;color:#0B1F3A;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 10px 24px rgba(11,31,58,0.06)" style-hover="color:#F26A21;transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 20px 40px rgba(11,31,58,0.12)">Equipment Rental <span style="color:#F26A21">→</span></a>
-      <a href="construction-services.html" style="background:#ffffff;border-radius:12px;padding:22px 24px;font-size:15px;font-weight:800;color:#0B1F3A;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 10px 24px rgba(11,31,58,0.06)" style-hover="color:#F26A21;transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 20px 40px rgba(11,31,58,0.12)">Construction Services <span style="color:#F26A21">→</span></a>
-      <a href="industrial-trading.html" style="background:#ffffff;border-radius:12px;padding:22px 24px;font-size:15px;font-weight:800;color:#0B1F3A;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 10px 24px rgba(11,31,58,0.06)" style-hover="color:#F26A21;transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 20px 40px rgba(11,31,58,0.12)">Industrial Trading <span style="color:#F26A21">→</span></a>
-      <a href="scrap-material.html" style="background:#ffffff;border-radius:12px;padding:22px 24px;font-size:15px;font-weight:800;color:#0B1F3A;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 10px 24px rgba(11,31,58,0.06)" style-hover="color:#F26A21;transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 20px 40px rgba(11,31,58,0.12)">Scrap Material <span style="color:#F26A21">→</span></a>
+    <div class="tx-grid-4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+      <a class="tx-row" href="equipment-rental.html" style="background:#ffffff;border-radius:12px;padding:22px 24px;font-size:15px;font-weight:800;color:#0B1F3A;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 10px 24px rgba(11,31,58,0.06)" style-hover="color:#F26A21;transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 20px 40px rgba(11,31,58,0.12)">Equipment Rental <span style="color:#F26A21">→</span></a>
+      <a class="tx-row" href="construction-services.html" style="background:#ffffff;border-radius:12px;padding:22px 24px;font-size:15px;font-weight:800;color:#0B1F3A;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 10px 24px rgba(11,31,58,0.06)" style-hover="color:#F26A21;transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 20px 40px rgba(11,31,58,0.12)">Construction Services <span style="color:#F26A21">→</span></a>
+      <a class="tx-row" href="industrial-trading.html" style="background:#ffffff;border-radius:12px;padding:22px 24px;font-size:15px;font-weight:800;color:#0B1F3A;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 10px 24px rgba(11,31,58,0.06)" style-hover="color:#F26A21;transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 20px 40px rgba(11,31,58,0.12)">Industrial Trading <span style="color:#F26A21">→</span></a>
+      <a class="tx-row" href="scrap-material.html" style="background:#ffffff;border-radius:12px;padding:22px 24px;font-size:15px;font-weight:800;color:#0B1F3A;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 1px 2px rgba(11,31,58,0.04),0 10px 24px rgba(11,31,58,0.06)" style-hover="color:#F26A21;transform:translateY(-3px);box-shadow:0 3px 6px rgba(11,31,58,0.05),0 20px 40px rgba(11,31,58,0.12)">Scrap Material <span style="color:#F26A21">→</span></a>
     </div>
   </div>
 </section>
 
 <section id="contact" data-screen-label="CTA Banner" style="background:linear-gradient(105deg, #F97B2F, #E85D0F)">
-  <div style="max-width:1240px;margin:0 auto;padding:44px 32px;display:flex;align-items:center;gap:28px">
-    <div style="flex:none;width:64px;height:64px;border-radius:50%;background:#0B1F3A;display:flex;align-items:center;justify-content:center;font-size:24px;color:#ffffff"><iconify-icon icon="lucide:phone-call" width="24"></iconify-icon></div>
+  <div class="tx-cta" style="max-width:1240px;margin:0 auto;padding:clamp(18px,3.06vw,44px) clamp(18px,4.5vw,32px);display:flex;align-items:center;gap:28px">
+    <div class="tx-fs-24" style="flex:none;width:64px;height:64px;border-radius:50%;background:#0B1F3A;display:flex;align-items:center;justify-content:center;font-size:24px;color:#ffffff"><iconify-icon icon="lucide:phone-call" width="24"></iconify-icon></div>
     <div style="display:flex;flex-direction:column;gap:6px;flex:1">
-      <h2 style="margin:0;font-size:30px;font-weight:800;color:#ffffff">Need a Reliable Workforce for Your Project?</h2>
+      <h2 class="tx-fs-30" style="margin:0;font-size:30px;font-weight:800;color:#ffffff">Need a Reliable Workforce for Your Project?</h2>
       <p style="margin:0;font-size:15px;color:rgba(255,255,255,0.9)">Get in touch with us today for certified, project-ready manpower.</p>
     </div>
     <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;background:#0B1F3A;color:#ffffff;font-size:15px;font-weight:700;padding:16px 30px;border-radius:10px;box-shadow:0 10px 24px rgba(11,31,58,0.3)" style-hover="background:#132c4f;color:#ffffff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(11,31,58,0.4)">Get In Touch <span>→</span></a>
@@ -138,7 +140,7 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
 </section>
 
 <footer id="footer" data-screen-label="Footer" style="background:#0B1F3A;color:#ffffff">
-  <div style="max-width:1240px;margin:0 auto;padding:80px 32px 56px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:48px">
+  <div class="tx-footer-grid" style="max-width:1240px;margin:0 auto;padding:clamp(34px,5.56vw,80px) clamp(18px,4.5vw,32px) clamp(24px,3.89vw,56px);display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:48px">
     <div style="display:flex;flex-direction:column;gap:18px">
       <img src="assets/logo-white.png" alt="Trexon" style="height:34px;width:auto;align-self:flex-start">
       <p style="margin:0;font-size:13.5px;line-height:1.7;color:rgba(255,255,255,0.7);max-width:260px">Trexon General Contracting Establishment is a Dammam-based company delivering reliable industrial solutions across Saudi Arabia.</p>
@@ -171,7 +173,7 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
     </div>
   </div>
   <div style="border-top:1px solid rgba(255,255,255,0.12)">
-    <div style="max-width:1240px;margin:0 auto;padding:22px 32px;display:flex;justify-content:space-between;align-items:center;gap:24px">
+    <div class="tx-footer-bottom" style="max-width:1240px;margin:0 auto;padding:clamp(16px,1.53vw,22px) clamp(18px,4.5vw,32px);display:flex;justify-content:space-between;align-items:center;gap:24px">
       <span style="font-size:12.5px;color:rgba(255,255,255,0.6)">© 2025 Trexon General Contracting Establishment. All Rights Reserved.</span>
       <div style="display:flex;gap:28px">
         <a href="#footer" style="font-size:12.5px;color:rgba(255,255,255,0.6)" style-hover="color:#F26A21">Privacy Policy</a>
