@@ -45,6 +45,7 @@
     var panel = document.createElement('nav');
     panel.className = 'tx-panel';
     panel.setAttribute('aria-label', 'Mobile navigation');
+    panel.setAttribute('aria-hidden', 'true');
 
     LINKS.forEach(function (item) { panel.appendChild(link(item, page)); });
 
@@ -68,17 +69,30 @@
       root.classList.toggle('tx-menu-open', open);
       burger.setAttribute('aria-expanded', String(open));
       burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      panel.setAttribute('aria-hidden', String(!open));
+      if (open) panel.querySelector('a').focus();
+      else burger.focus();
     }
 
-    burger.addEventListener('click', function () {
-      setOpen(!root.classList.contains('tx-menu-open'));
-    });
+    function isOpen() { return root.classList.contains('tx-menu-open'); }
+
+    burger.addEventListener('click', function () { setOpen(!isOpen()); });
     scrim.addEventListener('click', function () { setOpen(false); });
     panel.addEventListener('click', function (e) {
       if (e.target.tagName === 'A') setOpen(false);
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') setOpen(false);
+      if (!isOpen()) return;
+      if (e.key === 'Escape') { setOpen(false); return; }
+      if (e.key !== 'Tab') return;
+      // keep focus inside the open panel rather than letting it walk the page behind
+      var stops = [burger].concat([].slice.call(panel.querySelectorAll('a')));
+      var i = stops.indexOf(document.activeElement);
+      var next = e.shiftKey ? i - 1 : i + 1;
+      if (i === -1 || next < 0 || next >= stops.length) {
+        e.preventDefault();
+        stops[e.shiftKey ? stops.length - 1 : 0].focus();
+      }
     });
     window.addEventListener('resize', function () {
       if (window.innerWidth > 900) setOpen(false);

@@ -11,6 +11,11 @@ html, body { max-width: 100%; overflow-x: clip; }
 
 img, video, iframe, svg { max-width: 100%; }
 
+/* The width/height attributes exist to reserve aspect ratio and stop layout
+   shift. Without this they act as presentational size hints and stretch any
+   image whose CSS sets only one dimension. Inline styles still win. */
+img[width][height] { height: auto; }
+
 /* --------------------------------------------------------------------------
    Fluid typography — desktop sizes are the clamp ceiling, so nothing
    changes at wide widths.
@@ -30,6 +35,22 @@ img, video, iframe, svg { max-width: 100%; }
 @media (max-width: 600px) {
   /* tight negative tracking reads badly at small sizes */
   .tx-fs-58, .tx-fs-48, .tx-fs-44, .tx-fs-40 { letter-spacing: -0.3px !important; }
+}
+
+/* --------------------------------------------------------------------------
+   Focus visibility — the pages carry no :focus styling of their own
+   -------------------------------------------------------------------------- */
+/* Navy and white, both already in the palette. The brand orange is only
+   2.81:1 on the cream background, under the 3:1 a focus ring needs. */
+:focus-visible {
+  outline: 3px solid #0B1F3A !important;
+  outline-offset: 2px !important;
+}
+
+.tx-hero-inner :focus-visible,
+footer :focus-visible,
+.tx-panel :focus-visible {
+  outline-color: #ffffff !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -143,9 +164,9 @@ input, textarea, select { width: 100%; }
 
 @media (max-width: 560px) {
   .tx-row { flex-wrap: wrap !important; gap: 6px 12px !important; }
-  /* side-by-side CTAs break their labels mid-phrase once the column narrows */
-  .tx-btnrow { flex-direction: column !important; align-items: stretch !important; gap: 12px !important; }
-  .tx-btnrow > a { justify-content: center !important; }
+  /* side-by-side CTAs break their labels mid-phrase once the column narrows.
+     Stack at natural width to match every other button on the site. */
+  .tx-btnrow { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
 }
 
 /* --------------------------------------------------------------------------
@@ -236,11 +257,17 @@ input, textarea, select { width: 100%; }
   -webkit-overflow-scrolling: touch;
   transform: translateX(100%);
   visibility: hidden;
-  transition: transform .34s cubic-bezier(.22, 1, .36, 1), visibility .34s;
+  /* flip visibility instantly on open (so the first link can take focus) and
+     only after the slide-out completes on close */
+  transition: transform .34s cubic-bezier(.22, 1, .36, 1), visibility 0s linear .34s;
   box-shadow: -18px 0 48px rgba(11, 31, 58, .35);
 }
 
-.tx-menu-open .tx-panel { transform: translateX(0); visibility: visible; }
+.tx-menu-open .tx-panel {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform .34s cubic-bezier(.22, 1, .36, 1), visibility 0s;
+}
 .tx-menu-open { overflow: hidden; }
 .tx-menu-open .tx-burger { color: #fff; }
 
