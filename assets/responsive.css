@@ -75,7 +75,23 @@ input, textarea, select { width: 100%; }
   .tx-grid-3,
   .tx-grid-4,
   .tx-grid-2-tight { grid-template-columns: 1fr !important; }
-  .tx-footer-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+
+  /* Stacking all four footer columns makes a ~1400px wall of links. Keep the
+     two link lists side by side and let the brand and contact blocks run full
+     width, which roughly halves the footer height. */
+  .tx-footer-grid { grid-template-columns: 1fr 1fr !important; gap: 30px 20px !important; }
+  .tx-footer-grid > *:first-child,
+  .tx-footer-grid > *:last-child { grid-column: 1 / -1 !important; }
+}
+
+@media (max-width: 900px) {
+  /* 14–18px between single-line links reads as a nav menu, not a footer */
+  .tx-footer-grid > div { gap: 10px !important; }
+}
+
+@media (max-width: 600px) {
+  /* the floating WhatsApp button sits over the bottom bar at full scroll */
+  .tx-footer-bottom { padding-bottom: 84px !important; }
 }
 
 /* --------------------------------------------------------------------------
