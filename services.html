@@ -30,14 +30,14 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
 
 <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(11,31,58,0.06)">
   <div style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4.5vw,32px);height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-    <a href="index.html" style="display:block"><img decoding="async" src="assets/logo-transparent.webp" alt="Trexon" style="height:36px;display:block"></a>
+    <a href="index.html" style="display:block"><img width="440" height="112" decoding="async" src="assets/logo-transparent.webp" alt="Trexon" style="height:36px;width:auto;display:block"></a>
     <nav class="tx-nav" style="display:flex;align-items:center;gap:28px">
       <a href="index.html" style="font-size:14px;font-weight:600;color:#0B1F3A" style-hover="color:#F26A21">Home</a>
       <a href="about.html" style="font-size:14px;font-weight:600;color:#0B1F3A" style-hover="color:#F26A21">About Us</a>
-      <a href="#top" style="font-size:14px;font-weight:700;color:#F26A21;border-bottom:2px solid #F26A21;padding-bottom:4px">Our Services</a>
+      <a href="#top" style="font-size:14px;font-weight:700;color:#0B1F3A;border-bottom:2px solid #F26A21;padding-bottom:4px">Our Services</a>
       <a href="contact.html" style="font-size:14px;font-weight:600;color:#0B1F3A" style-hover="color:#F26A21">Contact Us</a>
     </nav>
-    <a class="tx-header-cta" href="contact.html" style="display:inline-flex;align-items:center;gap:8px;background:#F26A21;color:#ffffff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:10px;box-shadow:0 8px 20px rgba(242,106,33,0.28)" style-hover="background:#d5570f;color:#ffffff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(242,106,33,0.4)">Get a Quote <span style="font-size:15px">→</span></a>
+    <a class="tx-header-cta" href="contact.html" style="display:inline-flex;align-items:center;gap:8px;background:#F26A21;color:#0B1F3A;font-size:14px;font-weight:700;padding:12px 22px;border-radius:10px;box-shadow:0 8px 20px rgba(242,106,33,0.28)" style-hover="background:#F26A21;color:#0B1F3A;transform:translateY(-2px);box-shadow:0 14px 30px rgba(242,106,33,0.4)">Get a Quote <span style="font-size:15px">→</span></a>
   </div>
 </header>
 
@@ -46,7 +46,7 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
 <main>
 <section id="top" data-screen-label="Services Hero" style="background:radial-gradient(1000px 520px at 88% 0%, rgba(242,106,33,0.16), transparent 62%), #0B1F3A">
   <div style="max-width:1240px;margin:0 auto;padding:clamp(29px,4.86vw,70px) clamp(18px,4.5vw,32px) clamp(34px,5.56vw,80px);display:flex;flex-direction:column;gap:20px">
-    <span style="font-size:12px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.55)"><a href="index.html" style="color:rgba(255,255,255,0.55)" style-hover="color:#F26A21">HOME</a> / <span style="color:#F26A21">OUR SERVICES</span></span>
+    <span style="font-size:12px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,0.55)"><a class="tx-crumb" href="index.html" style="color:rgba(255,255,255,0.55)" style-hover="color:#F26A21">HOME</a> / <span style="color:#F26A21">OUR SERVICES</span></span>
     <h1 class="tx-fs-48" style="margin:0;font-size:48px;line-height:1.12;font-weight:800;letter-spacing:-1px;color:#ffffff">Complete Industrial Solutions, <span style="color:#F26A21">Under One Roof</span></h1>
     <div style="width:56px;height:4px;background:#F26A21;border-radius:2px"></div>
     <p style="margin:0;font-size:16px;line-height:1.75;color:rgba(255,255,255,0.82);max-width:640px">From certified manpower and heavy equipment to full construction scopes, trading, and recycling — Trexon delivers dependable services across the Kingdom's key sectors.</p>
@@ -55,48 +55,48 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
 
 <section class="tx-grid-6" data-screen-label="Service Cards" style="max-width:1240px;margin:0 auto;padding:clamp(38px,6.25vw,90px) clamp(18px,4.5vw,32px) clamp(42px,6.94vw,100px);display:grid;grid-template-columns:repeat(6,1fr);gap:28px">
   <a href="manpower-supply.html" style="grid-column:span 2;background:#ffffff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;color:#0B1F3A;box-shadow:0 4px 18px rgba(11,31,58,0.06)" style-hover="transform:translateY(-5px);box-shadow:0 4px 8px rgba(11,31,58,0.05),0 28px 56px rgba(11,31,58,0.16);color:#0B1F3A">
-    <img width="1376" height="768" decoding="async" src="assets/manpower-team.webp" alt="Manpower supply team" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block">
+    <img width="1376" height="768" decoding="async" srcset="assets/manpower-team-480.webp 480w, assets/manpower-team-800.webp 800w, assets/manpower-team.webp 1376w" sizes="(max-width: 900px) 100vw, 50vw" src="assets/manpower-team.webp" alt="Manpower supply team" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block">
     <div style="padding:28px;display:flex;flex-direction:column;gap:12px;flex:1">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h2 style="margin:0;font-size:21px;font-weight:800">Manpower Supply</h2>
       <p style="margin:0;font-size:14px;line-height:1.7;color:#5A6472;flex:1">Certified engineers, welders, riggers, supervisors, and site personnel — project-ready rental manpower for every discipline.</p>
-      <span style="font-size:14px;font-weight:800;color:#F26A21">View Service →</span>
+      <span style="font-size:14px;font-weight:800;color:#0B1F3A">View Service →</span>
     </div>
   </a>
   <a href="equipment-rental.html" style="grid-column:span 2;background:#ffffff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;color:#0B1F3A;box-shadow:0 4px 18px rgba(11,31,58,0.06)" style-hover="transform:translateY(-5px);box-shadow:0 4px 8px rgba(11,31,58,0.05),0 28px 56px rgba(11,31,58,0.16);color:#0B1F3A">
-    <img width="1376" height="768" decoding="async" loading="lazy" src="assets/equipment-fleet.webp" alt="Heavy equipment fleet" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block">
+    <img width="1376" height="768" decoding="async" loading="lazy" srcset="assets/equipment-fleet-480.webp 480w, assets/equipment-fleet-800.webp 800w, assets/equipment-fleet.webp 1376w" sizes="(max-width: 900px) 100vw, 50vw" src="assets/equipment-fleet.webp" alt="Heavy equipment fleet" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block">
     <div style="padding:28px;display:flex;flex-direction:column;gap:12px;flex:1">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h2 style="margin:0;font-size:21px;font-weight:800">Equipment Rentals &amp; Transportation</h2>
       <p style="margin:0;font-size:14px;line-height:1.7;color:#5A6472;flex:1">Cranes, excavators, trailers, buses, and branded site equipment — the right fleet for your project, on schedule.</p>
-      <span style="font-size:14px;font-weight:800;color:#F26A21">View Service →</span>
+      <span style="font-size:14px;font-weight:800;color:#0B1F3A">View Service →</span>
     </div>
   </a>
   <a href="construction-services.html" style="grid-column:span 2;background:#ffffff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;color:#0B1F3A;box-shadow:0 4px 18px rgba(11,31,58,0.06)" style-hover="transform:translateY(-5px);box-shadow:0 4px 8px rgba(11,31,58,0.05),0 28px 56px rgba(11,31,58,0.16);color:#0B1F3A">
-    <img width="1376" height="768" decoding="async" loading="lazy" src="assets/construction-site.webp" alt="Construction site at dusk" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block">
+    <img width="1376" height="768" decoding="async" loading="lazy" srcset="assets/construction-site-480.webp 480w, assets/construction-site-800.webp 800w, assets/construction-site.webp 1376w" sizes="(max-width: 900px) 100vw, 50vw" src="assets/construction-site.webp" alt="Construction site at dusk" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block">
     <div style="padding:28px;display:flex;flex-direction:column;gap:12px;flex:1">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h2 style="margin:0;font-size:21px;font-weight:800">Construction Services</h2>
       <p style="margin:0;font-size:14px;line-height:1.7;color:#5A6472;flex:1">The full scope of civil, electrical, and mechanical works — from industrial foundations to commissioned plants.</p>
-      <span style="font-size:14px;font-weight:800;color:#F26A21">View Service →</span>
+      <span style="font-size:14px;font-weight:800;color:#0B1F3A">View Service →</span>
     </div>
   </a>
   <a href="industrial-trading.html" style="grid-column:span 3;background:#ffffff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;color:#0B1F3A;box-shadow:0 4px 18px rgba(11,31,58,0.06)" style-hover="transform:translateY(-5px);box-shadow:0 4px 8px rgba(11,31,58,0.05),0 28px 56px rgba(11,31,58,0.16);color:#0B1F3A">
-    <img width="1376" height="768" decoding="async" loading="lazy" src="assets/industrial-trading.webp" alt="Industrial warehouse and IT infrastructure" style="width:100%;aspect-ratio:21/9;object-fit:cover;display:block">
+    <img width="1376" height="768" decoding="async" loading="lazy" srcset="assets/industrial-trading-480.webp 480w, assets/industrial-trading-800.webp 800w, assets/industrial-trading.webp 1376w" sizes="(max-width: 900px) 100vw, 50vw" src="assets/industrial-trading.webp" alt="Industrial warehouse and IT infrastructure" style="width:100%;aspect-ratio:21/9;object-fit:cover;display:block">
     <div style="padding:28px;display:flex;flex-direction:column;gap:12px;flex:1">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h2 style="margin:0;font-size:21px;font-weight:800">Industrial Services &amp; Trading</h2>
       <p style="margin:0;font-size:14px;line-height:1.7;color:#5A6472;flex:1">Cost-effective IT solutions — networking, CCTV, access control — plus quality civil materials delivered to site.</p>
-      <span style="font-size:14px;font-weight:800;color:#F26A21">View Service →</span>
+      <span style="font-size:14px;font-weight:800;color:#0B1F3A">View Service →</span>
     </div>
   </a>
   <a href="scrap-material.html" style="grid-column:span 3;background:#ffffff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;color:#0B1F3A;box-shadow:0 4px 18px rgba(11,31,58,0.06)" style-hover="transform:translateY(-5px);box-shadow:0 4px 8px rgba(11,31,58,0.05),0 28px 56px rgba(11,31,58,0.16);color:#0B1F3A">
-    <img width="1376" height="768" decoding="async" loading="lazy" src="assets/scrap-recycling.webp" alt="Scrap recycling yard" style="width:100%;aspect-ratio:21/9;object-fit:cover;display:block">
+    <img width="1376" height="768" decoding="async" loading="lazy" srcset="assets/scrap-recycling-480.webp 480w, assets/scrap-recycling-800.webp 800w, assets/scrap-recycling.webp 1376w" sizes="(max-width: 900px) 100vw, 50vw" src="assets/scrap-recycling.webp" alt="Scrap recycling yard" style="width:100%;aspect-ratio:21/9;object-fit:cover;display:block">
     <div style="padding:28px;display:flex;flex-direction:column;gap:12px;flex:1">
       <div style="width:36px;height:3px;background:#F26A21;border-radius:2px"></div>
       <h2 style="margin:0;font-size:21px;font-weight:800">Scrap Material Trading &amp; Recycling</h2>
       <p style="margin:0;font-size:14px;line-height:1.7;color:#5A6472;flex:1">Collection, processing, and responsible recycling of metals, e-waste, and industrial scrap — maximizing value for clients.</p>
-      <span style="font-size:14px;font-weight:800;color:#F26A21">View Service →</span>
+      <span style="font-size:14px;font-weight:800;color:#0B1F3A">View Service →</span>
     </div>
   </a>
 </section>
@@ -105,8 +105,8 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
   <div class="tx-cta" style="max-width:1240px;margin:0 auto;padding:clamp(18px,3.06vw,44px) clamp(18px,4.5vw,32px);display:flex;align-items:center;gap:28px">
     <div class="tx-fs-24" style="flex:none;width:64px;height:64px;border-radius:50%;background:#0B1F3A;display:flex;align-items:center;justify-content:center;font-size:24px;color:#ffffff"><iconify-icon icon="lucide:phone-call" width="24"></iconify-icon></div>
     <div style="display:flex;flex-direction:column;gap:6px;flex:1">
-      <h2 class="tx-fs-30" style="margin:0;font-size:30px;font-weight:800;color:#ffffff">Not Sure Which Service You Need?</h2>
-      <p style="margin:0;font-size:15px;color:rgba(255,255,255,0.9)">Tell us about your project and we'll put together the right solution.</p>
+      <h2 class="tx-fs-30" style="margin:0;font-size:30px;font-weight:800;color:#0B1F3A">Not Sure Which Service You Need?</h2>
+      <p style="margin:0;font-size:15px;color:#0B1F3A">Tell us about your project and we'll put together the right solution.</p>
     </div>
     <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;background:#0B1F3A;color:#ffffff;font-size:15px;font-weight:700;padding:16px 30px;border-radius:10px;box-shadow:0 10px 24px rgba(11,31,58,0.3)" style-hover="background:#132c4f;color:#ffffff;transform:translateY(-2px);box-shadow:0 14px 30px rgba(11,31,58,0.4)">Get In Touch <span>→</span></a>
   </div>
@@ -116,7 +116,7 @@ section div,footer div{transition:transform .35s cubic-bezier(.22,1,.36,1),box-s
 <footer id="footer" data-screen-label="Footer" style="background:#0B1F3A;color:#ffffff">
   <div class="tx-footer-grid" style="max-width:1240px;margin:0 auto;padding:clamp(34px,5.56vw,80px) clamp(18px,4.5vw,32px) clamp(24px,3.89vw,56px);display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:48px">
     <div style="display:flex;flex-direction:column;gap:18px">
-      <img width="2527" height="646" decoding="async" loading="lazy" src="assets/logo-white.webp" alt="Trexon" style="height:34px;width:auto;align-self:flex-start">
+      <img width="440" height="112" decoding="async" loading="lazy" src="assets/logo-white.webp" alt="Trexon" style="height:34px;width:auto;align-self:flex-start">
       <p style="margin:0;font-size:13.5px;line-height:1.7;color:rgba(255,255,255,0.7);max-width:260px">Trexon General Contracting Establishment is a Dammam-based company delivering reliable industrial solutions across Saudi Arabia.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px">

@@ -106,8 +106,16 @@ input, textarea, select { width: 100%; }
 }
 
 @media (max-width: 900px) {
-  /* 14–18px between single-line links reads as a nav menu, not a footer */
-  .tx-footer-grid > div { gap: 10px !important; }
+  /* 14–18px between single-line links reads as a nav menu, not a footer.
+     Move that spacing inside the links so each one is a ≥24px tap target
+     (WCAG 2.2 AA 2.5.8) instead of a 19px line of text with dead gaps. */
+  .tx-footer-grid > div { gap: 0 !important; }
+  .tx-footer-grid a { display: block; padding: 7px 0 !important; }
+  .tx-footer-grid h4 { margin-bottom: 10px !important; }
+
+  /* breadcrumb "HOME" is a 17px target; the negative margin buys hit area
+     without moving anything on the page */
+  .tx-crumb { display: inline-block; padding: 6px 4px; margin: -6px -4px; }
 }
 
 @media (max-width: 600px) {
