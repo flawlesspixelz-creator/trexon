@@ -43,7 +43,7 @@ img[width][height] { height: auto; }
 /* Navy and white, both already in the palette. The brand orange is only
    2.81:1 on the cream background, under the 3:1 a focus ring needs. */
 :focus-visible {
-  outline: 3px solid #0B1F3A !important;
+  outline: 3px solid #1a194f !important;
   outline-offset: 2px !important;
 }
 
@@ -66,6 +66,12 @@ footer :focus-visible,
 
 input, textarea, select, button { font-family: inherit; max-width: 100%; }
 input, textarea, select { width: 100%; }
+
+/* The tel/mailto links in the contact page's info cards sit outside the footer
+   rule and render 19px tall. Padding lifts them over the 24px minimum
+   (WCAG 2.2 AA 2.5.8) without moving the card layout. */
+#form a[href^="tel:"],
+#form a[href^="mailto:"] { display: inline-block; padding: 6px 0; }
 
 @media (max-width: 600px) {
   /* iOS zooms the page when a focused field is under 16px */
@@ -145,9 +151,9 @@ input, textarea, select { width: 100%; }
   .tx-hero-img { width: 100% !important; opacity: 0.5 !important; }
   .tx-hero-scrim {
     background: linear-gradient(180deg,
-      rgba(11, 31, 58, 0.92) 0%,
-      rgba(11, 31, 58, 0.74) 55%,
-      rgba(11, 31, 58, 0.9) 100%) !important;
+      rgba(26, 25, 79, 0.92) 0%,
+      rgba(26, 25, 79, 0.74) 55%,
+      rgba(26, 25, 79, 0.9) 100%) !important;
   }
   .tx-hero-badges {
     flex-direction: row !important;
@@ -214,7 +220,7 @@ input, textarea, select { width: 100%; }
   border: 0;
   padding: 0;
   cursor: pointer;
-  color: #0B1F3A;
+  color: #1a194f;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -251,7 +257,7 @@ input, textarea, select { width: 100%; }
   position: fixed;
   inset: 0;
   z-index: 64;
-  background: rgba(11, 31, 58, 0.5);
+  background: rgba(26, 25, 79, 0.5);
   opacity: 0;
   visibility: hidden;
   transition: opacity .3s ease, visibility .3s ease;
@@ -267,7 +273,7 @@ input, textarea, select { width: 100%; }
   z-index: 65;
   width: min(86vw, 340px);
   padding: 92px 26px 34px;
-  background: #0B1F3A;
+  background: #1a194f;
   color: #fff;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -276,7 +282,7 @@ input, textarea, select { width: 100%; }
   /* flip visibility instantly on open (so the first link can take focus) and
      only after the slide-out completes on close */
   transition: transform .34s cubic-bezier(.22, 1, .36, 1), visibility 0s linear .34s;
-  box-shadow: -18px 0 48px rgba(11, 31, 58, .35);
+  box-shadow: -18px 0 48px rgba(26, 25, 79, .35);
 }
 
 .tx-menu-open .tx-panel {
